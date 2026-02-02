@@ -1,0 +1,85 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[top=1cm,bottom=1.5cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage[hidelinks]{hyperref}
+\usepackage{booktabs}
+\pretolerance=1000
+\tolerance=2000
+\emergencystretch=2em
+\hyphenpenalty=5000
+\exhyphenpenalty=5000
+
+\setlist{nosep}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{0.8\baselineskip}%
+  \noindent{\textbf{#1}}\\[-0.5\baselineskip]%
+  \noindent\color{black}\rule{\textwidth}{0.5pt}\\[0.3\baselineskip]%
+}
+
+\newcommand{\contactline}[4]{
+    \noindent\centering
+    \href{mailto:#1}{#1} $$\cdot$$  
+    \href{https://github.com/#2}{github} $$\cdot$$  
+    \href{https://www.linkedin.com/in/#3}{linkedin} $$\cdot$$
+    \textnormal{#4}
+    \par
+}
+
+\begin{document}
+\begin{center}
+{\huge\bfseries $personal_info.name$}\\[0.2\baselineskip]
+{\large $personal_info.role$}\\[0.5\baselineskip]
+
+\contactline{$personal_info.email$}{$personal_info.github$}{$personal_info.linkedin$}{$personal_info.location$}
+\end{center}
+
+\cvsection{Professional Experience}
+\begin{tabularx}{\textwidth}{@{}X@{\hspace{2em}}r@{}}
+$for(professional_experience)$
+\textbf{$professional_experience.position$}, \textit{$professional_experience.organization$} &
+{\footnotesize $professional_experience.start_date$-$professional_experience.end_date$}\\
+\multicolumn{1}{@{}X}{\small $professional_experience.description$}&
+{\footnotesize $professional_experience.location$}\\\\
+$endfor$
+\end{tabularx}
+
+\cvsection{Education}
+\begin{tabularx}{\textwidth}{@{}X@{\hspace{2em}}r@{}}
+$for(education)$
+\textbf{$education.degree$}, \textit{$education.institution$} &
+{\footnotesize $education.start_date$-$education.end_date$}\\
+\multicolumn{1}{@{}X}{\small $education.description$}&
+{\footnotesize $education.location$}\\\\
+$endfor$
+\end{tabularx}
+
+\cvsection{Skills}
+$for(skills)$
+\noindent \textbf{$skills.category$: }$for(skills.items)$$skills.items$$sep$, $endfor$ \\ 
+$endfor$
+\noindent \textbf{Languages: }$for(languages)$$languages.language$ ($languages.level$)$sep$, $endfor$ \\
+
+\cvsection{Publications}
+\begin{tabularx}{\textwidth}{@{}X@{\hspace{2em}}r@{}}
+$for(publications)$
+\textbf{$publications.title$}, \textit{$publications.publisher$} &
+{\footnotesize $publications.year$}\\
+\multicolumn{1}{@{}X}{\small $publications.description$}&
+{\footnotesize $publications.location$}\\\\
+$endfor$
+\end{tabularx}
+\end{document}

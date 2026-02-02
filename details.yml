@@ -1,0 +1,95 @@
+personal_info:
+  name: "John Doe"
+  role: "Graduate Student"
+  email: "john.doe@example.com"
+  github: "johndoe"
+  linkedin: "johndoe"
+  location: "City, Country"
+  
+professional_experience:
+  - position: Position Title
+    organization: Organization Name
+    start_date: 01.2024
+    end_date: present
+    location: Country
+    description: Brief description of responsibilities and contributions.
+  
+  - position: Position Title
+    organization: Organization Name
+    start_date: 01.2023
+    end_date: 12.2023
+    location: Country
+    description: Brief description of responsibilities and contributions.
+  
+  - position: Position Title
+    organization: Organization Name
+    start_date: 01.2022
+    end_date: 12.2022
+    location: Country
+    description: Brief description of responsibilities and contributions.
+  
+  - position: Position Title
+    organization: Organization Name
+    start_date: 01.2021
+    end_date: 12.2021
+    location: Country
+    description: Brief description of responsibilities and contributions.
+
+education:
+  - degree: Degree Title
+    institution: University Name
+    start_date: 10.2022
+    end_date: present
+    location: Country
+    description: "Current GPA: X.X"
+  
+  - degree: Degree Title
+    institution: University Name
+    start_date: 10.2018
+    end_date: 09.2022
+    location: Country
+    description: "GPA: X.X"
+
+skills:
+  - category: Programming
+    items:
+      - Language A
+      - Language B
+      - Language C
+  
+  - category: Databases
+    items:
+      - Database A
+      - Database B
+  
+  - category: Frameworks
+    items:
+      - Framework A
+      - Framework B
+  
+  - category: Tools
+    items:
+      - Tool A
+      - Tool B
+      - Tool C
+  
+  - category: Competencies
+    items:
+      - Skill A
+      - Skill B
+      - Skill C
+
+languages:
+  - language: Language A
+    level: Native
+  - language: Language B
+    level: Fluent
+  - language: Language C
+    level: Basic
+
+publications:
+  - title: Publication Title
+    publisher: Publisher Name
+    year: 20XX
+    description: Conference or journal description.
+    location: Country
