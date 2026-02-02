@@ -1,4 +1,4 @@
-# Resume Boilerplate
+# Minimalist Resume Boilerplate
 
 A simple, automated resume generation system using YAML data files and LaTeX templates. This project allows you to maintain your resume data in a structured YAML file and automatically generate a professional PDF resume.
 
@@ -12,6 +12,11 @@ This project is inspired by [Typesetting automation](https://mrzool.cc/writing/t
 - **Automated generation**: One command to generate your PDF resume
 - **Customizable**: Easy to modify the LaTeX template for different styles
 - **Version controlled**: Track changes to your resume over time
+
+## Example
+<p align="center">
+  <img src="example.jpg" alt="Sample resume" width="500" />
+</p>
 
 ## Prerequisites
 
